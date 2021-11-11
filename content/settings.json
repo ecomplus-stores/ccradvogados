@@ -1,24 +1,24 @@
 {
-  "store_id": 15248,
-  "name": "ccradvogados",
   "domain": "ccradvogados.netlify.app",
-  "short_name": "ccradvogados",
-  "description": "ccradvogados",
-  "primary_color": "#222831",
-  "secondary_color": "#393e46",
-  "bg_color": "#ffffff",
+  "currency_symbol": "R$",
+  "primary_color": "#000000",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
+  "bg_color": "#ffffff",
+  "repository": "ecomplus-stores/ccradvogados",
   "logo": "/img/uploads/logo.png",
-  "mini_logo": "",
-  "icon": "/img/icon.png",
-  "large_icon": "/img/large-icon.png",
-  "favicon": "/img/uploads/favicon.png",
+  "name": "CCR Advogados - Soluções Jurídicas Inteligentes",
+  "short_name": "CCR Advogados",
   "lang": "pt_br",
   "currency": "BRL",
-  "currency_symbol": "R$",
+  "mini_logo": "",
+  "favicon": "/img/uploads/ico.png",
   "country_code": "BR",
-  "repository": "ecomplus-stores/ccradvogados"
+  "secondary_color": "#b08f32",
+  "icon": "/img/uploads/ico.png",
+  "store_id": 15248,
+  "description": "Chaiben, Cunha e Ramos",
+  "large_icon": "/img/uploads/ico.png"
 }
