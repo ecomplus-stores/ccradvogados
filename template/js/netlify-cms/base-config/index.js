@@ -285,9 +285,6 @@ export default options => {
       getLayout(options),
       getPages(options),
       getBlogPosts(options),
-      getReceitas(options),
-      getGrids(options),
-      getMenuConfig(options),
       getExtraPages(options),
       getWidgets(options)
     ]
