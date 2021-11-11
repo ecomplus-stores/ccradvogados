@@ -3,27 +3,34 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "slides": [
-        {
-          "img": "/img/uploads/rect89.webp",
-          "link": "/headset",
-          "alt": "Headset banner",
-          "start": "2020-04-11T05:54:06.750Z",
-          "end": "2020-12-31T03:00:00.000Z"
-        },
-        {
-          "img": "/img/uploads/banner2.webp",
-          "alt": "Banner sample two",
-          "start": "",
-          "end": ""
-        }
-      ]
+      "type": "responsive-banner",
+      "img": "/img/uploads/bg.png",
+      "alt": "Advocacia com atendimento especializado<small>Moderno, na <b>Forma física</b> ou <b>100% digital</b>.</small>"
     },
     {
-      "type": "info-bar",
-      "enabled": true
+      "type": "apx_textSection",
+      "title": "<small>Sobre nós</small>Advocacia com<br><b>Atendimento especializado</b>",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+      "titleColor": "#000000",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/mb1.png",
+          "alt": "<h2>Direito Tributário e empresarial</h2><p>Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal.</p>"
+        },
+        {
+          "img": "/img/uploads/mb2.png",
+          "alt": "<h2>Atendimento Especializado</h2><p>Atendimento especializado para médicos, clínicas, consultórios e hospitais.</p>"
+        },
+        {
+          "img": "/img/uploads/mb3.png",
+          "alt": "<h2>Serviços digitais</h2><p>Se inscreva no nosso portal e conheça nossos serviços digitais</p>"
+        }
+      ]
     },
     {
       "type": "collection-shelf",
