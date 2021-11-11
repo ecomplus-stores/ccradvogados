@@ -112,6 +112,32 @@
           }
         }
       ]
+    },
+    {
+      "type": "apx_sliderItems",
+      "title": "Nossa Equipe",
+      "backgroundImage": "/img/uploads/shutterstock_1060957841.png",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+      "titleColor": "#ffffff",
+      "textColor": "#ffffff",
+      "backgroundColor": "#000000",
+      "options": []
+    },
+    {
+      "type": "apx_bannerRow",
+      "options": [
+        {
+          "option": {
+            "title": "Direito Tributário e Empresarial",
+            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "buttonTitle": "Leia Mais",
+            "link": "/",
+            "backgroundColor": "#b09f32",
+            "textColor": "#ffffff",
+            "titleColor": "#ffffff"
+          }
+        }
+      ]
     }
   ]
 }
