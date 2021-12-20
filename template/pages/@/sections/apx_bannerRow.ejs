@@ -1,3 +1,20 @@
-<div>
-    
+<div class="apx_bannerRow">
+    <% if (Array.isArray(opt.options) && opt.options.length) { %>
+        <div class="container-fluid">
+            <div class="row">
+                <% for (let i = 0; i < opt.options.length; i++) { %>
+                <div class="item col-12 col-lg mb-3 mb-lg-0" style="<%- opt.options[i].option.backgroundColor ? 'background-color:' + opt.options[i].option.backgroundColor + ';' : ''%>">
+                    <strong style="<%- opt.options[i].option.titleColor ? 'color:' + opt.options[i].option.titleColor + ';' : ''%>"><%- opt.options[i].option.title %></strong>
+                    <p style="<%- opt.options[i].option.textColor ? 'color:' + opt.options[i].option.textColor + ';' : ''%>"><%- opt.options[i].option.description %></p>
+                    <a 
+                    style="
+                    <%- opt.options[i].option.textColor ? 'background-color:' + opt.options[i].option.textColor + ';' : ''%>
+                    <%- opt.options[i].option.backgroundColor ? 'color:' + opt.options[i].option.backgroundColor + ';' : ''%>
+                    "
+                    href="<%- opt.options[i].option.link %>"><%- opt.options[i].option.buttonTitle %></a>
+                </div>
+                <% } %>
+            </div>
+        </div>        
+    <% } %>      
 </div>

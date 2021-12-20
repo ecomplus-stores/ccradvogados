@@ -136,6 +136,28 @@
             "textColor": "#ffffff",
             "titleColor": "#ffffff"
           }
+        },
+        {
+          "option": {
+            "title": "Atendimento Especializado",
+            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "buttonTitle": "Leia Mais",
+            "link": "/",
+            "backgroundColor": "#C8A641",
+            "textColor": "#ffffff",
+            "titleColor": "#ffffff"
+          }
+        },
+        {
+          "option": {
+            "title": "Serviços Digitais",
+            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "buttonTitle": "Leia Mais",
+            "link": "/",
+            "backgroundColor": "#b09f32",
+            "textColor": "#ffffff",
+            "titleColor": "#ffffff"
+          }
         }
       ]
     }

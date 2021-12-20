@@ -1,1 +1,50 @@
 // Add your custom CSS here.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --cor1:#af8f31
+}
+.justify-content-between{justify-content:space-between}
+body{
+    font-family:"Montserrat"
+}
+.container{max-width:1230px}
+#ccr_footer{
+    background-image:url(/img/uploads/bg_footer.png);
+    border:0;
+    color: #fff;
+    padding-bottom:0;
+}
+#ccr_footer *{color:#fff}
+#ccr_footer .footer__title{font-size:18px;font-weight:700;text-transform:uppercase;margin-bottom:1.5rem;}
+#ccr_footer .header__logo{max-width:unset;max-height:unset;}
+#ccr_footer .footer__contacts{
+    text-align:center;
+    margin-top:2.5rem;
+}
+#ccr_footer .footer__contacts li{margin-bottom:10px;}
+#ccr_footer .footer__links li{margin-bottom:10px;}
+#ccr_footer .footer__links li a{font-size:14px;}
+
+#ccr_footer .footer__credits{
+    border:0;
+    background:var(--cor1);
+    padding:.5rem;
+    font-size:11px;
+    text-align:center;
+}
+#ccr_footer .footer__credits span{
+    display:block;
+    width:100%;
+}
+
+body  > iframe:last-child{display:none}
+
+.apx_bannerRow{}
+.apx_bannerRow .item{
+    padding:4rem;
+    text-align:center;
+}
+.apx_bannerRow .item strong{font-size:22px;text-transform:uppercase;display:block;margin-bottom:2rem;}
+.apx_bannerRow .item p{font-size:16px;margin-bottom:1.5rem;}
+.apx_bannerRow .item a{font-size:14px;display:block;width:fit-content;padding:.7rem 2rem;margin:0 auto;text-transform:uppercase;font-weight:500}

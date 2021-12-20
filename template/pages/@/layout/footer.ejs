@@ -1,19 +1,17 @@
 <%
 // load footer options and contacts from content
 const footer = _.cms('footer') || {}
+const header = _.cms('header') || {}
 const contacts = _.cms('contacts') || {}
 %>
 
-<footer class="footer py-3 py-lg-4 py-xl-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-auto order-lg-last pl-xl-4">
+<footer id="ccr_footer" class="footer py-3 py-lg-5">
+  <div class="container py-4">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-auto pr-xl-4 mr-5">
+        <%- await include('@/layout/inc/logo', { _ }) %>
         <div class="footer__contacts">
-          <% if (footer.contacts.title) { %>
-            <div class="footer__title">
-              <%= footer.contacts.title %>
-            </div>
-          <% } %>
+          
 
           <ul class="list-unstyled">
             <% if (footer.contacts.phone_wpp) { %>
@@ -54,14 +52,7 @@ const contacts = _.cms('contacts') || {}
                   <%= contacts.email %>
                 </a>
               </li>
-            <% } %>
-            <% if (footer.contacts.address) { %>
-              <li>
-                <address>
-                  <%= contacts.address %>
-                </address>
-              </li>
-            <% } %>
+            <% } %>            
           </ul>
 
           <% if (footer.contacts.socials) { %>
@@ -90,7 +81,6 @@ const contacts = _.cms('contacts') || {}
                 <% (_.cms('pages') || []).forEach(slug => { %>
                   <% const { title } = _.cms(`pages/${slug}`) %>
                   <li>
-                    <i class="fas fa-angle-right"></i>
                     <a href="/pages/<%= slug %>">
                       <%= title %>
                     </a>
@@ -101,7 +91,6 @@ const contacts = _.cms('contacts') || {}
               <ul class="footer__links">
                 <% footer.links_1.list.forEach(({ url, text }) => { %>
                   <li>
-                    <i class="fas fa-angle-right"></i>
                     <a href="<%= url %>">
                       <%= text %>
                     </a>
@@ -155,7 +144,39 @@ const contacts = _.cms('contacts') || {}
         </div>
       <% } %>
 
-      <div class="col-12 col-xl order-lg-first">
+      <%
+        const posts = _.cms('posts')
+        if (Array.isArray(posts) && posts.length) {
+      %>
+      <div class="col-12 col-sm-6 col-lg col-xl-auto px-xl-4">
+        <a
+          class="footer__title"
+          data-toggle="collapse"
+          href="#footer-categories"
+          role="button"
+          aria-expanded="false"
+          aria-controls="footer-categories"
+        >
+          Artigos
+        </a>
+        <div class="collapse" id="footer-categories">
+          
+          <ul class="footer__links">
+                    
+            <% posts.forEach(slug => { %>
+              <% const { title, thumbnail, description } = _.cms(`posts/${slug}`) %>
+                <li>
+                  <a href="/<%= slug %>">
+                    <%= title %>
+                  </a>
+                </li>            
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+      <% } %>
+
+      <div class="col-12 col-xl d-none">
         <h2 class="footer__title footer__store">
           <%= footer.description.title || _.settings.name %>
         </h2>
@@ -174,22 +195,22 @@ const contacts = _.cms('contacts') || {}
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="footer__credits">
-      <span>
-        <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
-      </span>
-      <button
-        id="go-to-top"
-        class="btn btn-primary ml-3"
-        type="button"
-        aria-label="<%= _.dictionary('goToTop') %>"
-      >
-        <i class="fas fa-chevron-up"></i>
-      </button>
-    </div>
+    </div>    
+  </div>
+  <div class="footer__credits">
+    <span>
+      <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
+    </span>
+    <!-- <button
+      id="go-to-top"
+      class="btn btn-primary ml-3"
+      type="button"
+      aria-label="<%= _.dictionary('goToTop') %>"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button> -->
   </div>
 </footer>
-
+<!--
 <%- await include('@/layout/inc/ecom-credits') %>
+-->
