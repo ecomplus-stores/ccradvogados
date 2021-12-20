@@ -138,6 +138,10 @@
           }
         }
       ]
+    },
+    {
+      "type": "blog",
+      "enabled": true
     }
   ]
 }
