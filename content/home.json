@@ -121,7 +121,15 @@
       "titleColor": "#ffffff",
       "textColor": "#ffffff",
       "backgroundColor": "#000000",
-      "options": []
+      "options": [
+        {
+          "option": {
+            "image": "/img/uploads/dsc01584.png",
+            "link": "/",
+            "name": "Nome do Advogado"
+          }
+        }
+      ]
     },
     {
       "type": "apx_bannerRow",
