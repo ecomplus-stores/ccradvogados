@@ -160,6 +160,10 @@
           }
         }
       ]
+    },
+    {
+      "type": "blog",
+      "enabled": true
     }
   ]
 }
