@@ -1,3 +1,48 @@
-<div>
-    
+<div class="apx_iconGrid" style="<%- opt.backgroundImage ? 'background-image:url(' + opt.backgroundImage + ');' : ''%><%- opt.backgroundColor ? 'background-color:' + opt.backgroundColor + ';' : ''%>">
+    <% if (Array.isArray(opt.options) && opt.options.length) { %>
+        <div class="container pt-3 pb-5">
+            <div class="row mb-4 justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <% if(opt.title) {%>
+                        <h3 class="text-center ccr_title mt-5 mb-3" style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%= opt.title %></h3>                        
+                    <% } %>
+                    <% if(opt.description) {%>
+                        <p class="text-center" style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%= opt.description %></p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="iconGrid mt-5" style="--items:<%= opt.options.length %>">
+                    <% if (opt.image) { %>
+                        <div class="principal">                        
+                            <img
+                            src="<%= opt.image %>"
+                            class="card-img-top"
+                            alt="<%= opt.title %>"
+                            >
+                            <% for (let i = 0; i < opt.options.length; i++) { %>                
+                                <div class="item">
+                                    <div class="animate__animated" animate="animate__fadeInUp">
+                                        <a href="<%= opt.options[i].option.link %>">
+                                            <% if (opt.options[i].option.image) { %>
+                                            <img
+                                            src="<%= opt.options[i].option.image %>"
+                                            class="card-img-top"
+                                            alt="<%= opt.options[i].option.name %>"
+                                            >
+                                            <% } %>
+                                            <strong style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%- opt.options[i].option.name %></strong>
+                                        </a>        
+                                    </div>                
+                                </div>
+                            <% } %>
+                        </div>
+                    <% } %>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>        
+    <% } %>      
 </div>

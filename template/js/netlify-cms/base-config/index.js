@@ -7,7 +7,7 @@ import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
 //ALPIX CUSTOM MODULES
-//import getReceitas from './collections/receitas-posts'
+import getProductsLandingPage from './collections/produtos-post'
 //import getGrids from './collections/grids'
 //import getMenuConfig from './collections/menu-config'
 
@@ -184,6 +184,11 @@ export default options => {
                   widget: 'image'
                 },
                 {
+                  label: 'Descrição',
+                  name: 'description',
+                  widget: 'string'          
+                },
+                {
                   label: 'Link de destino',
                   name: 'link',
                   widget: 'string'          
@@ -285,6 +290,7 @@ export default options => {
       getLayout(options),
       getPages(options),
       getBlogPosts(options),
+      getProductsLandingPage(options),
       getExtraPages(options),
       getWidgets(options)
     ]

@@ -5,12 +5,12 @@
     {
       "type": "responsive-banner",
       "img": "/img/uploads/bg.png",
-      "alt": "Advocacia com atendimento especializado<small>Moderno, na <b>Forma física</b> ou <b>100% digital</b>.</small>"
+      "alt": "<b>Advocacia</b> com atendimento especializado<small>Moderno, na <b>Forma física</b> ou <b>100% digital</b>.</small>"
     },
     {
       "type": "apx_textSection",
-      "title": "<small>Sobre nós</small>Advocacia com<br><b>Atendimento especializado</b>",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+      "title": "<small>Sobre nós</small>Advocacia com<br><b>Atendimento<br>especializado</b>",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.<br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
       "titleColor": "#000000",
       "backgroundColor": "#ffffff",
       "textColor": "#000000"
@@ -44,69 +44,69 @@
         {
           "option": {
             "image": "/img/uploads/documento.png",
-            "name": "Elaboração contratual cível",
+            "name": "Elaboração<br>contratual cível",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração contratual imobiliária e locatícia",
+            "name": "Elaboração contratual<br>imobiliária e locatícia",
             "image": "/img/uploads/empreendimento.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração contratual empresarial",
+            "name": "Elaboração contratual<br>empresarial",
             "image": "/img/uploads/company.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração de TCLE e documentos da área da saúde",
+            "name": "Elaboração de TCLE e<br>documentos da área da saúde",
             "image": "/img/uploads/health-insurance.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão contratual cível",
+            "name": "Análise e revisão<br>contratual cível",
             "image": "/img/uploads/analytics.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão contratual empresarial",
+            "name": "Análise e revisão<br>contratual empresarial",
             "image": "/img/uploads/analytic.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão contratual em saúde suplementar",
+            "name": "Análise e revisão contratual<br>em saúde suplementar",
             "image": "/img/uploads/healthcare.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Juizados especiais cíveis - direito do consumidor",
+            "name": "Juizados especiais cíveis -<br>direito do consumidor",
             "image": "/img/uploads/consumer.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Parecer em questões tributárias",
+            "name": "Parecer em questões<br>tributárias",
             "image": "/img/uploads/justice.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Consultoria jurídica digital",
+            "name": "Consultoria<br>jurídica digital",
             "image": "/img/uploads/globe.png",
             "link": "/"
           }
@@ -125,6 +125,31 @@
         {
           "option": {
             "image": "/img/uploads/dsc01584.png",
+            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "link": "/",
+            "name": "Nome do Advogado"
+          }
+        },
+        {
+          "option": {
+            "image": "/img/uploads/dsc01584.png",
+            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "link": "/",
+            "name": "Nome do Advogado"
+          }
+        },
+        {
+          "option": {
+            "image": "/img/uploads/dsc01584.png",
+            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "link": "/",
+            "name": "Nome do Advogado"
+          }
+        },
+        {
+          "option": {
+            "image": "/img/uploads/dsc01584.png",
+            "description": "Aqui uma descrição sobre o funcionário ou o item",
             "link": "/",
             "name": "Nome do Advogado"
           }

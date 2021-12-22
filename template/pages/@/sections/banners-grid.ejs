@@ -1,11 +1,85 @@
 <% if (Array.isArray(opt.banners) && opt.banners.length) { %>
   <% const colSize = Math.ceil(12 / opt.banners.length) %>
   <div class="banners-grid my-3 my-md-4 my-lg-5">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <% for (let i = 0; i < opt.banners.length; i++) { %>
-          <div class="col-12 col-lg-<%= colSize %> mb-3 mb-lg-0">
-            <%- await include('@/sections/inc/banner', { _, opt: opt.banners[i] }) %>
+          <% if ([1,3,5,7].includes(opt.banners.length) && i == 0){ %>
+          <div class="col-12 col-lg-12 mb-3 mb-lg-0">
+          <% }else{%>
+            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+          <% } %>
+            <%
+            const opt_ =  opt.banners[i]
+            if (opt_.img) {
+              const { width, height } = _.tryImageSize(opt_.img)
+              const sources = [{ src: opt_.img }]
+              if (opt_.mobile_img) {
+                sources[0].media = '(min-width: 576px)'
+                sources.push({
+                  src: opt_.mobile_img,
+                  media: '(min-width: 100px)'
+                })
+              }
+              sources.forEach(source => {
+                if (source.src.endsWith('.webp')) {
+                  source.type = 'image/webp'
+                  sources.push({
+                    src: source.src.replace('.webp', '.png'),
+                    media: source.media,
+                    type: 'image/png'
+                  })
+                }
+              })
+              %>
+
+              <div class="banner">
+                <a
+                  href="<%= opt_.link || 'javascript:;' %>"
+                  aria-label="<%= opt_.alt %>"
+                >
+                  <picture
+                    <% if (opt_.sync_load) { %>
+                      class="img-fluid"
+                    <% } else { %>
+                      class="lozad fade img-fluid"
+                      data-iesrc="<%= opt_.img.replace('.webp', '.png') %>"
+                      data-alt="<%= opt_.alt %>"
+                    <% } %>
+                    <% if (!opt_.height_auto && width) { %>
+                      data-width="<%= width %>"
+                      data-height="<%= height %>"
+                    <% } %>
+                  >
+                    <% sources.forEach(({ src, media, type }) => { %>
+                      <source
+                        srcset="<%= src %>"
+                        media="<%- media %>"
+                        <% if (type) { %>
+                          type="<%- type %>"
+                        <% } %>
+                      >
+                    <% }) %>
+                    <% if (opt_.sync_load) { %>
+                      <img
+                        src="<%= opt_.img.replace('.webp', '.png') %>"
+                        alt="<%= opt_.alt %>"
+                        <% if (width) { %>
+                          width="<%= width %>"
+                          height="<%= height %>"
+                        <% } %>
+                      >
+                    <% } %>
+                  </picture>
+                  <div class="ccr_customBannerAlt animate__animated" animate="animate__fadeInUp">
+                    <%- opt_.alt %>
+                  </div>
+                </a>
+              </div>
+              <%
+            }
+            %>
+
           </div>
         <% } %>
       </div>

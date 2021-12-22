@@ -1,3 +1,35 @@
-<div>
-    
+<div class="apx_sliderItens" style="<%- opt.backgroundImage ? 'background:url(' + opt.backgroundImage + ');' : ''%>">
+    <% if (Array.isArray(opt.options) && opt.options.length) { %>
+        <div class="container pt-3 pb-5">
+            <div class="row mb-4 justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <% if(opt.title) {%>
+                        <h3 class="text-center ccr_title mt-5 mb-3" style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%= opt.title %></h3>                        
+                    <% } %>
+                    <% if(opt.description) {%>
+                        <p class="text-center" style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%= opt.description %></p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="row">
+                <% for (let i = 0; i < opt.options.length; i++) { %>
+                <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+                    <div class="item">
+                        <% if (opt.options[i].option.image) { %>
+                            <a href="<%= opt.options[i].option.link %>">
+                                <img
+                                src="<%= opt.options[i].option.image %>"
+                                class="card-img-top"
+                                alt="<%= opt.options[i].option.name %>"
+                                >
+                            </a>
+                        <% } %>
+                        <strong style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%- opt.options[i].option.name %></strong>
+                        <p style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%- opt.options[i].option.description %></p>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>        
+    <% } %>      
 </div>

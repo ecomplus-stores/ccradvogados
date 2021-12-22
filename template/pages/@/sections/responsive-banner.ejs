@@ -1,5 +1,93 @@
 <div class="responsive-baner my-3 my-lg-4">
-  <div class="container">
-    <%- await include('@/sections/inc/banner', { _, opt }) %>
+  <div class="container-fluid px-0">
+    <% if (_.pageName == "home") {%>
+      <%
+        const opt_ =  opt
+        if (opt_.img) {
+          const { width, height } = _.tryImageSize(opt_.img)
+          const sources = [{ src: opt_.img }]
+          if (opt_.mobile_img) {
+            sources[0].media = '(min-width: 576px)'
+            sources.push({
+              src: opt_.mobile_img,
+              media: '(min-width: 100px)'
+            })
+          }
+          sources.forEach(source => {
+            if (source.src.endsWith('.webp')) {
+              source.type = 'image/webp'
+              sources.push({
+                src: source.src.replace('.webp', '.png'),
+                media: source.media,
+                type: 'image/png'
+              })
+            }
+          })
+          %>
+
+          <div class="banner banner-home">            
+              <picture
+                <% if (opt_.sync_load) { %>
+                  class="img-fluid"
+                <% } else { %>
+                  class="lozad fade img-fluid"
+                  data-iesrc="<%= opt_.img.replace('.webp', '.png') %>"
+                  data-alt="<%= opt_.alt %>"
+                <% } %>
+                <% if (!opt_.height_auto && width) { %>
+                  data-width="<%= width %>"
+                  data-height="<%= height %>"
+                <% } %>
+              >
+                <% sources.forEach(({ src, media, type }) => { %>
+                  <source
+                    srcset="<%= src %>"
+                    media="<%- media %>"
+                    <% if (type) { %>
+                      type="<%- type %>"
+                    <% } %>
+                  >
+                <% }) %>
+                <% if (opt_.sync_load) { %>
+                  <img
+                    src="<%= opt_.img.replace('.webp', '.png') %>"
+                    alt="<%= opt_.alt %>"
+                    <% if (width) { %>
+                      width="<%= width %>"
+                      height="<%= height %>"
+                    <% } %>
+                  >
+                <% } %>
+              </picture>
+              <div class="ccr_customBannerAlt animate__animated animate__fadeInDown">
+                <%- opt_.alt %>
+                <a
+                class="btn"
+              href="<%= opt_.link || 'javascript:;' %>"
+              >
+              Confira nossas áreas de atuação
+            </a>
+            </div>
+            <div class="ccr_readmoreBottom">
+              <button class="animate__animated force_opacity animate__shakeY animate__infinite animate__slower">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="41px" height="19px">
+                <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                d="M1.618,1.789 L20.011,15.732 L38.381,1.789 "/>
+                </svg>
+              </button>
+            </div>
+
+              
+             
+          </div>
+          <%
+        }
+        %>
+      <%}else{%>
+      <%- await include('@/sections/inc/banner', { _, opt }) %>
+    <%}%>
   </div>
 </div>
