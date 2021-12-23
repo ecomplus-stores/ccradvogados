@@ -1,14 +1,12 @@
 {
-  "title": "Blog",
-  "meta_title": "Blog",
-  "meta_description": "Blog",
+  "title": "Artigos",
+  "meta_title": "Artigos",
+  "meta_description": "Confira nossas últimas publicações e se informe sobre as últimas novidades do ramo jurídico.",
   "sections": [
     {
-      "type": "breadcrumbs",
-      "enabled": true
-    },
-    {
-      "type": "page-title"
+      "type": "responsive-banner",
+      "img": "/img/uploads/grain-texture.png",
+      "alt": "<h1>Artigos</h1><p>Confira nossas últimas publicações e se informe sobre as últimas novidades do ramo jurídico.</p>"
     },
     {
       "type": "blog",
