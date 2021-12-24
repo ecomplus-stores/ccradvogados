@@ -1,3 +1,51 @@
-<div class="blog-post">
-  <%- await include('@/sections/inc/md-content') %>
+<% const { title, thumbnail, description } = _.cms(`posts/${_.pageName.split('/')[1]}`) %>
+<% console.log(opt) %>
+<% console.log(_.pageName) %>
+<div>
+  <div class="responsive-baner my-3 my-lg-4">
+    <div class="container-fluid px-0">    
+      <div class="banner banner-home">            
+        <img
+          src="<%= thumbnail %>"
+          class="card-img-top"
+          alt="<%= title %>"
+        >
+          <div class="ccr_customBannerAlt blog animate__animated animate__fadeInDown">
+            <h1><%- title %></h1>
+            <p><%- description %></p>
+          </div>            
+      </div>       
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-9">
+      <div class="blog-post">
+      <%- await include('@/sections/inc/md-content') %>
+      </div>
+    </div>
+    <div class="col-md-3 col-12">
+      <div id="artigos-recentes">
+      <h3 class="mb-4">Artigos Recentes</h3>
+      <ul>
+        <%
+          const posts_ = _.cms('posts')
+          console.log(posts_)
+            if (Array.isArray(posts_) && posts_.length) {
+              %>
+                
+              <% posts_.slice(0,10).forEach(slug_ => { %>
+                <% const post__ = _.cms(`posts/${slug_}`) %>
+                  <li>
+                    <a href="/posts/<%= slug_ %>">
+                    <%= post__.title %>
+                    </a>                      
+                  </li>
+              <% }) %>
+                   
+            <% } %>        
+      </ul>
+    </div>
+    </div>
+  </div>
 </div>

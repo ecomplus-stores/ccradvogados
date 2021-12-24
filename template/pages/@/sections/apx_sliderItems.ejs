@@ -11,7 +11,7 @@
                     <% } %>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <% for (let i = 0; i < opt.options.length; i++) { %>
                 <div class="col-12 col-lg-4 mb-3 mb-lg-0">
                     <div class="item">
@@ -30,6 +30,62 @@
                 </div>
                 <% } %>
             </div>
+             -->
+             <div
+             class="glide"
+             data-autoplay="true"
+             data-per-view="3"
+             data-per-view-md="3"
+             data-per-view-sm="2"
+           >
+             <div class="glide__track" data-glide-el="track">
+               <ul class="glide__slides products-carousel__list">
+                   <% for (let i = 0; i < opt.options.length; i++) { %>
+                   <li class="glide__slide products-carousel__item">
+                       <div class="item">
+                           <% if (opt.options[i].option.image) { %>
+                               <a href="<%= opt.options[i].option.link %>">
+                                   <img
+                                   src="<%= opt.options[i].option.image %>"
+                                   class="card-img-top"
+                                   alt="<%= opt.options[i].option.name %>"
+                                   >
+                               </a>
+                           <% } %>
+                           <strong style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%- opt.options[i].option.name %></strong>
+                           <p style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%- opt.options[i].option.description %></p>
+                       </div>
+                   </li>
+                   <% } %>
+               </ul>
+       
+               <div
+                 class="glide__arrows glide__arrows--outer"
+                 data-glide-el="controls"
+               >
+                 <button
+                   class="btn glide__arrow glide__arrow--left"
+                   data-glide-dir="<"
+                   aria-label="<%= _.dictionary('previous') %>"
+                 >
+                    <svg style="transform:rotate(90deg)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41px" height="19px">
+                    <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M1.618,1.789 L20.011,15.732 L38.381,1.789 "></path>
+                    </svg>
+                 </button>
+                 <button
+                   class="btn glide__arrow glide__arrow--right"
+                   data-glide-dir=">"
+                   aria-label="<%= _.dictionary('next') %>"
+                 >
+                 <svg style="transform:rotate(-90deg)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41px" height="19px">
+                    <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M1.618,1.789 L20.011,15.732 L38.381,1.789 "></path>
+                    </svg>
+                 </button>
+               </div>
+             </div>
+           </div>
         </div>        
     <% } %>      
 </div>
+
+   

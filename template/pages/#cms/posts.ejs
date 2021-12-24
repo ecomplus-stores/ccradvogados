@@ -10,8 +10,6 @@ _.breadcrumbs = [{
 }]
 if (!content.sections || !content.sections.length) {
   content.sections = [
-    { type: 'breadcrumbs' },
-    { type: 'page-title' },
     { type: 'blog-post' }
   ]
 } else if (!content.sections.find(({ type }) => type === 'blog-post')) {

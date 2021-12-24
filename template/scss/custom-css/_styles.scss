@@ -242,10 +242,11 @@ body  > iframe:last-child{display:none}
     font-size:12px;
 }
 
-#page-home .ccr_header{
+.header-fixed .ccr_header{
     position:absolute;background:transparent;
 }
-#page-home .responsive-baner:first-child{margin-top:0}
+.header-fixed .responsive-baner:first-child{margin-top:0}
+.header-fixed .responsive-baner:first-child img{min-height:50vh}
 
 #ccr_client{
     position:absolute;
@@ -277,3 +278,60 @@ body  > iframe:last-child{display:none}
 
 .animate__animated{opacity:0}
 .force_opacity{opacity:1!important;}
+
+.blog.ccr_customBannerAlt{
+text-align:center;
+bottom:30px;
+}
+
+.blog.ccr_customBannerAlt h1{
+    font-size:38px;
+    color:var(--cor1);
+    font-weight:600;
+}
+.blog.ccr_customBannerAlt p{
+    text-transform:initial;
+    margin:0 auto;
+    max-width:100%;
+    width:600px;
+}
+#page-blog .card img{margin-bottom:2rem;}
+#page-blog .card-body a.btn{
+    background:var(--cor1);
+    color:#fff;
+    margin-left:0;
+    
+}
+#page-blog .card-body .card-text{
+    max-width:100%;
+    padding:0;
+    margin:1rem 0;
+}
+#page-blog .card-body .card-title{
+    max-width:100%;
+    font-size:18px;
+    border:0;
+    padding:0;
+    line-height:initial;
+    font-weight:700;
+    color:#434040;
+}
+
+#artigos-recentes{
+    background:#F0F0F0;
+    display:block;
+    padding:2rem;
+}
+#artigos-recentes h3{
+    text-transform:uppercase;
+    font-size:18px;
+    font-weight:700;
+}
+#artigos-recentes ul{
+    padding:0;margin:0;list-style-type:none;
+    display:flex;
+    gap:20px;
+    flex-direction:column;
+}
+#artigos-recentes ul li {}
+#artigos-recentes ul li a{font-size:14px;}

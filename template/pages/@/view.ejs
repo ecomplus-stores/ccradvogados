@@ -7,7 +7,7 @@
 
 <body
   id="page-<%= _.pageName %>"
-  class="_<%= _.route.path.replace(/\//g, '_') %>"
+  class="_<%= _.route.path.replace(/\//g, '_') %> <%= ['blog','home'].includes(_.pageName) || _.pageName.includes('posts') ? 'header-fixed' : '' %>"
   <% if (_.route.resource) { %>
     data-resource="<%= _.route.resource %>"
     data-resource-id="<%= _.state._id %>"

@@ -86,6 +86,73 @@
           <%
         }
         %>
+      <% }else if(_.pageName == "blog") {%>
+        <%
+          const opt_ =  opt
+          if (opt_.img) {
+            const { width, height } = _.tryImageSize(opt_.img)
+            const sources = [{ src: opt_.img }]
+            if (opt_.mobile_img) {
+              sources[0].media = '(min-width: 576px)'
+              sources.push({
+                src: opt_.mobile_img,
+                media: '(min-width: 100px)'
+              })
+            }
+            sources.forEach(source => {
+              if (source.src.endsWith('.webp')) {
+                source.type = 'image/webp'
+                sources.push({
+                  src: source.src.replace('.webp', '.png'),
+                  media: source.media,
+                  type: 'image/png'
+                })
+              }
+            })
+            %>
+  
+            <div class="banner banner-home">            
+                <picture
+                  <% if (opt_.sync_load) { %>
+                    class="img-fluid"
+                  <% } else { %>
+                    class="lozad fade img-fluid"
+                    data-iesrc="<%= opt_.img.replace('.webp', '.png') %>"
+                    data-alt="<%= opt_.alt %>"
+                  <% } %>
+                  <% if (!opt_.height_auto && width) { %>
+                    data-width="<%= width %>"
+                    data-height="<%= height %>"
+                  <% } %>
+                >
+                  <% sources.forEach(({ src, media, type }) => { %>
+                    <source
+                      srcset="<%= src %>"
+                      media="<%- media %>"
+                      <% if (type) { %>
+                        type="<%- type %>"
+                      <% } %>
+                    >
+                  <% }) %>
+                  <% if (opt_.sync_load) { %>
+                    <img
+                      src="<%= opt_.img.replace('.webp', '.png') %>"
+                      alt="<%= opt_.alt %>"
+                      <% if (width) { %>
+                        width="<%= width %>"
+                        height="<%= height %>"
+                      <% } %>
+                    >
+                  <% } %>
+                </picture>
+                <div class="ccr_customBannerAlt blog animate__animated animate__fadeInDown">
+                  <%- opt_.alt %>
+                </div>            
+            </div>
+            <%
+          }
+          %>
+        
       <%}else{%>
       <%- await include('@/sections/inc/banner', { _, opt }) %>
     <%}%>
