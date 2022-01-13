@@ -92,6 +92,12 @@
     </url>
   
     <url>
+      <loc>https://ccradvogados.netlify.app/maintenance/index</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
       <loc>https://ccradvogados.netlify.app/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
@@ -101,12 +107,6 @@
       <loc>https://ccradvogados.netlify.app/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
-    </url>
-  
-    <url>
-      <loc>https://ccradvogados.netlify.app/maintenance/index</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
     </url>
   
 </urlset>
