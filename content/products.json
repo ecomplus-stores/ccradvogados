@@ -18,11 +18,11 @@
     },
     {
       "type": "product-description",
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "product-specifications",
-      "enabled": true
+      "enabled": false
     }
   ]
 }

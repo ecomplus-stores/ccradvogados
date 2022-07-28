@@ -51,6 +51,7 @@ body  > iframe:last-child{display:none}
 .apx_bannerRow .item strong{font-weight:500;font-size:22px;text-transform:uppercase;display:block;margin-bottom:2rem;}
 .apx_bannerRow .item p{font-size:16px;margin-bottom:1.5rem;}
 .apx_bannerRow .item a,
+#ccr-product_info_description .html-clearfix + a,
 .blog .card-body a.btn{font-size:14px;display:block;width:fit-content;padding:.7rem 2rem;margin:0 auto;text-transform:uppercase;font-weight:500}
 
 .ccr_title{
@@ -186,6 +187,7 @@ body  > iframe:last-child{display:none}
 }
 .apx_textSection .ccr_title small{display:block;font-size:24px}
 .apx_textSection .ccr_title b{display:block;}
+#ccr-product_info_description .html-clearfix,#ccr-product_info_description .html-clearfix *,
 .apx_textSection .description{
     font-size:17px;
     line-height:36px;
@@ -242,6 +244,7 @@ body  > iframe:last-child{display:none}
     font-size:12px;
 }
 
+#page-products .ccr_header{position:relative;}
 .header-fixed .ccr_header{
     position:absolute;background:transparent;
 }
@@ -283,17 +286,20 @@ body  > iframe:last-child{display:none}
 text-align:center;
 bottom:30px;
 }
-
+#ccr-product_info h1,
 .blog.ccr_customBannerAlt h1{
     font-size:38px;
     color:var(--cor1);
     font-weight:600;
+    
 }
+#ccr-product_info p,
 .blog.ccr_customBannerAlt p{
     text-transform:initial;
     margin:0 auto;
     max-width:100%;
     width:600px;
+    font-size:17px
 }
 #page-blog .card img{margin-bottom:2rem;}
 #page-blog .card-body a.btn{
@@ -335,3 +341,126 @@ bottom:30px;
 }
 #artigos-recentes ul li {}
 #artigos-recentes ul li a{font-size:14px;}
+
+#page-products .sections{padding-bottom:0!important}
+#page-products .breadcrumb {display: none;}
+#ccr-product_info{
+    background:#000;
+
+}
+
+.align-items-center{align-items:center}
+
+#ccr-product_info h1{text-transform:uppercase!important;}
+#ccr-product_info p{color:#fff}
+
+#ccr-product_info_description{}
+#ccr-product_info_description .html-clearfix,#ccr-product_info_description .html-clearfix *{}
+#ccr-product_info_description .html-clearfix + a{
+    border-radius:0;
+    background:var(--cor1);
+    color:#fff;
+    margin-right:auto;
+    margin-left:0;
+    margin-bottom: var(--spacer-4);
+}
+#ccr-product_info_specs{}
+#ccr-product_info_specs ul{
+    columns:2;
+    gap:30px;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    color:#000;
+    border-left: 10px solid var(--cor1);
+    padding-left:30px;
+}
+#ccr-product_info_specs ul li{}
+#ccr-product_info_specs ul li b{display:block;color:#000;text-transform:uppercase}
+#ccr-product_info_specs ul li span{}
+
+#ccr-product_buy{
+    color:#fff;
+    background-color:var(--cor1)
+}
+#ccr-product_buy .info{}
+#ccr-product_buy .info strong{
+    text-transform:uppercase;
+    font-size:32px;
+}
+#ccr-product_buy .info strong small{
+    display:block;
+    color:#fff;
+    border-top:3px solid #000;
+    width:fit-content;
+    margin:0 auto;
+    padding:1rem 0 1rem 0;
+}
+#ccr-product_buy .info p{
+    margin:2rem 0 3rem 0;
+    font-size:18px;
+    font-weight:300;
+}
+
+#ccr-product_buy .pricing{
+    display:flex;flex-direction:column;gap:20px;
+}
+#ccr-product_buy .pricing span,
+#ccr-product_buy .pricing s{
+    font-size:28px;
+    line-height:28px;
+}
+#ccr-product_buy .pricing strong{
+    font-size:72px;
+    line-height:72px;
+}
+#ccr-product_buy .pricing span{}
+#ccr-product_buy button{
+    font-weight:bold;
+    margin-top:3rem;
+    background:#000;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    font-size: 36px;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+
+#ccr-product_buy form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:460px;
+    max-width:100%;
+    margin:0 auto;
+}
+#ccr-product_buy form input{
+    border:1px solid #ccc;
+    padding:1rem;
+}
+#ccr-product_buy form button{font-size:22px;margin-top:0}
+
+@media(max-width:990px){
+    .ccr_header ul{
+        display:none;
+    }
+    .responsive-baner .ccr_customBannerAlt .btn{
+        padding: 10px 15px;
+        font-size: 11px;
+        margin-top:15px
+    }
+    .ccr_readmoreBottom{padding:1rem;transform:scale(.8)}
+    .responsive-baner .ccr_customBannerAlt{bottom:10px;font-size:20px}
+    .responsive-baner .ccr_customBannerAlt small{font-size:15px}
+    .header-fixed .responsive-baner:first-child picture{height:60vh;width:100vw}
+    .header-fixed .responsive-baner:first-child img{
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        transform: translate(-50%);
+        left: 50%;
+        width: auto;
+    }
+}

@@ -1,175 +1,147 @@
-<div id="product-block" class="product-block my-4 mb-lg-5">
-  <div class="container">
-    <section
-      id="product"
-      class="product"
-      data-to-render="true"
-      data-product-id="<%= _.state._id %>"
-      data-sku="<%= _.state.sku %>"
-    >
-      <div id="product-dock">
-        <!--
-          `TheProduct` should be rendered (hydrated) here:
-          https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/TheProduct.html
-        -->
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-md-6 mb-4">
-          <!-- Picture(s) gallery will be inserted dynamically within `TheProduct` -->
-          <% if (_.state.pictures) { %>
-            <% const imgObj = _.ecomUtils.img(_.state, null, 'big') %>
-            <% if (imgObj) { %>
-              <% const [width, height] = (imgObj.size || '').split('x').map(px => parseInt(px, 10)) %>
-              <div id="product-gallery">
-                <div
-                  class="product__picture"
-                  <% if (width) { %>
-                    style="max-width: <%= width %>px"
-                  <% } %>  
-                >
-                  <picture
-                    <% if (width && height) { %>
-                      class="picture"
-                      style="--aspect-ratio-pc: <%= Math.round(height * 100 * 10000 / width) / 10000 %>%"
-                    <% } %>
-                  >
-                    <source
-                      srcset="<%= _.ecomUtils.img(_.state).url %>"
-                      type="image/webp"
-                      media="(max-width: 399.98px)"
-                    >
-                    <source
-                      srcset="<%= imgObj.url %>"
-                      type="image/webp"
-                      media="(min-width: 400px)"
-                    >
-                    <img
-                      src="<%= imgObj.url.replace(/\.webp$/, '') %>"
-                      alt="<%= imgObj.alt || _.state.name %>"
-                      <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
-                        crossorigin="anonymous"
-                      <% } %>
-                      <% if (height) { %>
-                        width="<%= width %>"
-                        height="<%= height %>"
-                      <% } %>
-                    >
-                  </picture>
-                </div>
-              </div>
-            <% } %>
-          <% } %>
-          <!-- Custom additional code on bottom of images gallery -->
-        </div>
-
-        <div class="col">
-          <h1 class="product__name">
-            <%= _.ecomUtils.name(_.state) %>
-          </h1>
-          <p class="product__sku">
-            COD: <%= _.state.sku %>
-          </p>
-
-          <div id="product-actions">
-            <div id="product-loading">
-              <% if (_.state.available && _.state.visible && _.ecomUtils.inStock(_.state)) { %>
-                <div class="product__price prices prices--big">
-                  <strong class="prices__value">
-                    <%= _.ecomUtils.formatMoney(_.ecomUtils.price(_.state)) %>
-                  </strong>
-                </div>
-              <% } %>
-
-              <% if (_.state.variations && _.state.variations.length) { %>
-                <div data-slot="variations-info">
-                  <!-- Custom info for products with variations, such as sizes table link -->
-                  <% if (opt.size_guide && opt.size_guide.image) { %>
-                    <% const sizeGuideTitle = opt.size_guide.title || _.dictionary('sizeGuide') %>
-                    <div class="mb-3">
-                      <a 
-                        href="javascript:;"
-                        data-toggle="modal"
-                        data-target="#modal-size-guide"
-                      >
-                        <i class="i-ruler mr-1"></i> <%= sizeGuideTitle %>
-                      </a>
-                    </div>
-                    <div 
-                      class="modal modal-center fade" 
-                      id="modal-size-guide" 
-                      tabindex="-1" 
-                      style="display: none;" 
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header d-flex align-items-center justify-content-between">
-                            <h5 class="modal-title">
-                              <%= sizeGuideTitle %>
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <img 
-                              class="img-fluid" 
-                              src="<%= opt.size_guide.image %>" 
-                              alt="<%= sizeGuideTitle %>"
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <% } %>
-                </div>
-              <% } %>
-
-              <div class="spinner-border m-4" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-
-              <div class="product__buy">
-                <button
-                  type="button"
-                  class="btn btn-lg btn-primary"
-                  onclick="ecomCart.addProduct(storefront.context.body)"
-                  <% if (_.state.variations && _.state.variations.length) { %>
-                    disabled
-                  <% } %>
-                >
-                  <div data-slot="buy-button-content">
-                    <i class="i-shopping-bag mr-1"></i>
-                    <% if (_.state.kit_composition && _.state.kit_composition.length) { %>
-                      <%= _.dictionary('buyKit') %>
-                    <% } else { %>
-                      <%= _.dictionary('buy') %>
-                    <% } %>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-
+<div id="ccr-product_info" class='py-5'>
+  <div class="container text-center">
+      <h1 class="product__name pt-md-5">
+        <%= _.ecomUtils.name(_.state) %>
+      </h1>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
           <% if (_.state.short_description) { %>
-            <p class="product__info mt-3 lead">
+            <p class="product__info mt-3 lead pb-md-5">
               <%= _.state.short_description %>
             </p>
           <% } %>
         </div>
       </div>
-
-      <%- await include('@/helpers/widgets-append', {
-        _, opt: {}, field: 'productSlots'
-      }) %>
-    </section>
-
-    <%- await include('@/helpers/widgets-append', {
-      _, opt: {}, field: 'productBlockAppend'
-    }) %>
   </div>
 </div>
+<div id="ccr-product_info_description" class="my-5 py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-5">
+      <% if (_.state.pictures) { %>
+        <% const imgObj = _.ecomUtils.img(_.state, null, 'big') %>
+        <% if (imgObj) { %>
+          <% 
+          console.log(_.state)
+          const [width, height] = (imgObj.size || '').split('x').map(px => parseInt(px, 10)) %>
+          <img
+              src="<%= imgObj.url.replace(/\.webp$/, '') %>"
+              alt="<%= imgObj.alt || _.state.name %>"
+              style="max-width:100%;height:auto;"
+              <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
+                crossorigin="anonymous"
+              <% } %>
+              <% if (height) { %>
+                width="<%= width %>"
+                height="<%= height %>"
+              <% } %>
+              
+            >
+        <% } %>
+      <% } %>
+      </div>
+      <div class="col-12 col-md-6 offset-md-1">
+      <div class="html-clearfix">
+        <%- _.state.body_html.replace(
+          /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
+          '<img class="lozad" data-src="$2" $1 $3>'
+        ).replace(
+          /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
+          '<img class="lozad $3" data-src="$1" $2 $4>'
+        ) %>
+      </div>
+      <a class='btn' href="#saiba-mais">Saiba mais</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='ccr-product_info_specs' class='my-5 py-5'>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <ul>
+        <% for (const gridId in _.state.specifications) {
+          if (_.state.specifications[gridId]) {
+            %>
+            <li>
+              <b>
+                <%= _.ecomUtils.gridTitle(gridId, _.grids) %>
+              </b>
+              <span>
+                <%= _.ecomUtils.specTextValue(_.state, gridId, _.grids) %>
+              </span>
+            </li>
+            <%
+          }
+        } %>
+        </ul>
+      </div>
+      <div class="col-12 col-md-5 offset-md-1">
+        <% if (_.state.pictures[1]) { %>
+          <% const secondImg = _.state.pictures[1].zoom %>
+          <img
+            src="<%= secondImg.url.replace(/\.webp$/, '') %>"
+            alt="<%= secondImg.alt || _.state.name %>"
+            style="max-width:100%;height:auto;"
+            <% if (secondImg.url.startsWith('https://ecoms1.com/')) { %>
+              crossorigin="anonymous"
+            <% } %>
+          >
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='ccr-product_buy' class='py-5'>
+  <div class="container d-none logged_in">
+    <div class="row justify-content-center mt-3 mb-3">
+      <div class="col-12 col-md-7 text-center">
+        <div class="info">
+          <strong>
+            <small>Contrate agora</small>
+            <%= _.ecomUtils.name(_.state) %>
+          </strong>
+          <p>Aproveite esta condição especial para nossos clientes já cadastrados. Ao finalizar sua compra nossa equipe entrará em contato através dos dados informados na etapa de finalização.</p>
+        </div>
+        <div class="pricing">
+          <% if (_.state.price) { %>
+            <s><%- _.ecomUtils.formatMoney(_.state.price * 1.3) %></s>
+          <% } %>
+          <% if (_.state.price) { %>
+            <strong><%- _.ecomUtils.formatMoney(_.state.price) %></strong>
+          <% } %>
+          <span>Em até 10x de <%- _.ecomUtils.formatMoney(_.state.price / 10) %></span>
+        </div>
+        <button type="button">
+          Contratar
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container  d-none logged_out">
+    <div class="row justify-content-center mt-3 mb-3">
+      <div class="col-12 col-md-6 text-center">
+        <div class="info">
+          <strong>
+            <small>Tire suas dúvidas sobre</small>
+            <%= _.ecomUtils.name(_.state) %>
+          </strong>
+          <p>Preencha o formulário abaixo e um membro de nossa equipe entrará em contato para tirar suas dúvidas em relação a este serviço.</p>
+        </div>
+        <form action="">
+          <input type="text" placeholder="Nome">
+          <input type="text" placeholder="E-mail">
+          <input type="text" placeholder="Telefone ou Whatsapp">
+          <button type="submit">
+            Enviar
+          </button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%
 const productJsonLd = {
@@ -211,6 +183,6 @@ if (_.state.gtin && _.state.gtin[0]) {
   productJsonLd.gtin = _.state.gtin[0]
 }
 %>
-<script type="application/ld+json"><%-
+<!-- <script type="application/ld+json"><%-
   JSON.stringify(productJsonLd)
-%></script>
+%></script> -->

@@ -1,4 +1,12 @@
 // Add your custom JavaScript for storefront pages here.
+if(ecomPassport.getCustomerName() == ''){
+    $('.logged_in').remove();
+    $('.logged_out').removeClass('d-none');
+}else{
+    $('.logged_in').removeClass('d-none');
+    $('.logged_out').remove();
+}
+
 $('[animate]').each(function(){
     let me = this;
     $(window).scroll(function(){
