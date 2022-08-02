@@ -5,12 +5,12 @@
     {
       "type": "responsive-banner",
       "img": "/img/uploads/bg.png",
-      "alt": "<b>Advocacia</b> com atendimento especializado<small>Moderno, na <b>Forma física</b> ou <b>100% digital</b>.</small>"
+      "alt": "<b>Soluções Jurídicas Inteligentes</b> para sua empresa<small>Atendimento moderno, na <b>Forma física</b> ou <b>100% digital</b>.</small>"
     },
     {
       "type": "apx_textSection",
       "title": "<small>Sobre nós</small>Advocacia com<br><b>Atendimento<br>especializado</b>",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.<br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+      "description": "Somos o verdadeiro parceiro do empresário. Atuamos de forma ativa, levando soluções personalizadas ao negócio, da pequena à grande empresa. O nosso lema é crescer junto! Para tanto, agimos com foco na prevenção, evitando despesas desnecessárias, tornando a sua empresa competitiva e aumentando o seu fluxo de caixa.<br>Deixamos o empresário à frente do que realmente interessa ao seu negócio: o crescimento coordenado e a diferença do seu produto no mercado, impactando positivamente seus clientes. Desse modo, as preocupações com o cumprimento das leis e análises e adequações contratuais passa a ser do nosso time de advogados, engajado e de espírito empreendedor e inovador. ",
       "titleColor": "#000000",
       "backgroundColor": "#ffffff",
       "textColor": "#000000"
