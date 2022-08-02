@@ -10,7 +10,8 @@ const networks = [
   'instagram',
   'twitter',
   'pinterest',
-  'linkedin'
+  'linkedin',
+  'tiktok'
 ]
 
 // marketing stripe custom styles
@@ -66,13 +67,50 @@ if (header.categories_list) {
     <% } %>
   <% } %>
 </div>
+<div id="ccr_mobile_menu" class="d-block d-md-none">
+  <bytton type="button" class="ccr_mobile_menu_close">    
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+  </bytton>
+  <ul>
+    <li>
+      <a href="#sobre-nos">
+        Institucional
+      </a>
+    </li>
+    <li>
+      <a href="#equipe">
+        Equipe
+      </a>
+    </li>
+    <li>
+      <a href="#areas-de-atuacao">
+        Áreas de Atuação
+      </a>
+    </li>
+    <li>
+      <a href="/advocacia-digital">
+        Advocacia Digital
+      </a>
+    </li>
+    <li>
+      <a href="/blog">
+        Artigos
+      </a>
+    </li>
+    <li>
+      <a href="/contato">
+        Contato
+      </a>
+    </li>
+  </ul>
+</div>
 <header class="header ccr_header" id="header">
-  <div class="container">
+  <div class="container">    
+    <button type="button" class="d-block d-md-none ccr_mobile_menu_trigger">
+      <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Menu</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+    </button>
     <div id="ccr_client">
       <ul class="list-inline">
-        <li>
-
-        </li>
         <li>
           <a href="">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
@@ -87,23 +125,24 @@ if (header.categories_list) {
       <div class="col">
         <ul>
           <li>
-            <a href="">
+            <a href="#sobre-nos">
               Institucional
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#equipe">
               Equipe
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#areas-de-atuacao">
               Áreas de Atuação
             </a>
           </li>
         </ul>
       </div>
-      <div class="col-md-3 col-6">
+      <div class="col-md-3 col-7 mobile-adjust-start">
+        
         <a href="/">
           <%- await include('@/layout/inc/logo', { _ }) %>
         </a>
@@ -111,17 +150,17 @@ if (header.categories_list) {
       <div class="col">
         <ul>
           <li>
-            <a href="">
+            <a href="/advocacia-digital">
               Advocacia Digital
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/blog">
               Artigos
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/contato">
               Contato
             </a>
           </li>

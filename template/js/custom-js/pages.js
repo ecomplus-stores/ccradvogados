@@ -56,3 +56,10 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
+$('.ccr_mobile_menu_trigger').click(function(){
+    $('#ccr_mobile_menu').addClass('open');
+});
+$('.ccr_mobile_menu_close').click(function(){
+    $('#ccr_mobile_menu').removeClass('open');
+})
