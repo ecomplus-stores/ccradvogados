@@ -11,26 +11,7 @@
                     <% } %>
                 </div>
             </div>
-            <!-- <div class="row">
-                <% for (let i = 0; i < opt.options.length; i++) { %>
-                <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                    <div class="item">
-                        <% if (opt.options[i].option.image) { %>
-                            <a href="<%= opt.options[i].option.link %>">
-                                <img
-                                src="<%= opt.options[i].option.image %>"
-                                class="card-img-top"
-                                alt="<%= opt.options[i].option.name %>"
-                                >
-                            </a>
-                        <% } %>
-                        <strong style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%- opt.options[i].option.name %></strong>
-                        <p style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%- opt.options[i].option.description %></p>
-                    </div>
-                </div>
-                <% } %>
-            </div>
-             -->
+            
              <div
              class="glide"
              data-autoplay="true"
@@ -60,7 +41,7 @@
                </ul>
        
                <div
-                 class="glide__arrows glide__arrows--outer"
+                 class="glide__arrows d-block d-md-none glide__arrows--outer"
                  data-glide-el="controls"
                >
                  <button
