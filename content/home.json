@@ -44,70 +44,105 @@
         {
           "option": {
             "image": "/img/uploads/documento.png",
-            "name": "Elaboração<br>contratual cível",
+            "name": "Elaboração e Análise<br>Contratual",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração contratual<br>imobiliária e locatícia",
+            "name": "Holding<br>Patrimonial",
             "image": "/img/uploads/empreendimento.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração contratual<br>empresarial",
+            "name": "Gestão de<br>Passivo",
             "image": "/img/uploads/company.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Elaboração de TCLE e<br>documentos da área da saúde",
+            "name": "Benefícios Fiscais<br>para Clínicas",
             "image": "/img/uploads/health-insurance.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão<br>contratual cível",
+            "name": "Planejamento<br>Fiscal",
             "image": "/img/uploads/analytics.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão<br>contratual empresarial",
+            "name": "Assessoria<br>Fixa Empresarial",
             "image": "/img/uploads/analytic.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Análise e revisão contratual<br>em saúde suplementar",
+            "name": "Revisão contratual<br>em Saúde Suplementar ",
             "image": "/img/uploads/healthcare.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Juizados especiais cíveis -<br>direito do consumidor",
+            "name": "Defesas Consumeristas<br>para Empresas",
             "image": "/img/uploads/consumer.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Parecer em questões<br>tributárias",
+            "name": "Assessoria<br>Criminal",
             "image": "/img/uploads/justice.png",
             "link": "/"
           }
         },
         {
           "option": {
-            "name": "Consultoria<br>jurídica digital",
+            "name": "Registros de Marcas<br>e Patentes",
             "image": "/img/uploads/globe.png",
+            "link": "/"
+          }
+        },
+        {
+          "option": {
+            "name": "Adequação à<br>LGPD",
+            "image": "/img/uploads/40x40.png",
+            "link": "/"
+          }
+        },
+        {
+          "option": {
+            "name": "Recuperação de Crédito<br>Tributário",
+            "image": "/img/uploads/40x40.png",
+            "link": "/"
+          }
+        },
+        {
+          "option": {
+            "name": "Defesas Fiscais<br>Administrativas/Judiciais",
+            "image": "/img/uploads/40x40.png",
+            "link": "/"
+          }
+        },
+        {
+          "option": {
+            "name": "Defesas<br>Trabalhistas",
+            "image": "/img/uploads/40x40.png",
+            "link": "/"
+          }
+        },
+        {
+          "option": {
+            "name": "Acessoria<br>Criminal",
+            "image": "/img/uploads/40x40.png",
             "link": "/"
           }
         }
