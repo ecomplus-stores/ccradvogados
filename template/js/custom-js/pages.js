@@ -27,8 +27,8 @@ $('.iconGrid').each(function(){
   
       // Calculate the position for each circle
       circles.each(function(index) {
-        var x = 500 * Math.cos(-0.5 * Math.PI + degree * (-1 * index - 0.5));
-        var y = 400 * Math.sin(-0.5 * Math.PI + degree * (-1 * index - 0.5));
+        var x = 550 * Math.cos(-0.5 * Math.PI + degree * (-1 * index - 0.5));
+        var y = 350 * Math.sin(-0.5 * Math.PI + degree * (-1 * index - 0.5));
   
         transforms.push('translate(' + x + 'px,' + y + 'px)');
       });
