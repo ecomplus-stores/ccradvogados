@@ -160,33 +160,25 @@
         {
           "option": {
             "image": "/img/uploads/dsc01584.png",
-            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "description": "Especialista na área tributária, responsável pelas medidas de recuperação de tributos, planejamento tributário, defesas das empresas e empresários. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "Nome do Advogado"
+            "name": "EDINO CHAIBEN"
           }
         },
         {
           "option": {
             "image": "/img/uploads/dsc01584.png",
-            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "description": "Especialista na área do Direito Médico e da Saúde, pós-graduado em Direito Tributário, responsável pelo planejamento jurídico/fiscal de Clínicas, Consultórios, Hospitais e outras empresas e sociedades na área da saúde. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "Nome do Advogado"
+            "name": "Jaime Cunha"
           }
         },
         {
           "option": {
             "image": "/img/uploads/dsc01584.png",
-            "description": "Aqui uma descrição sobre o funcionário ou o item",
+            "description": "Especialista na área do Direito Criminal e Processo Penal, responsável pela análise do risco na responsabilização penal do empresário, com foco nos crimes empresariais, Lei de Sonegação Fiscal e Lei de Crimes Ambientais. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "Nome do Advogado"
-          }
-        },
-        {
-          "option": {
-            "image": "/img/uploads/dsc01584.png",
-            "description": "Aqui uma descrição sobre o funcionário ou o item",
-            "link": "/",
-            "name": "Nome do Advogado"
+            "name": "Anderson Ramos"
           }
         }
       ]
