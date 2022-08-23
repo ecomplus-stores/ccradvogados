@@ -65,17 +65,25 @@ body  > iframe:last-child{display:none}
     margin-left:auto;
     margin-right:auto;
 }
+.blog .card{
+    margin-bottom:3rem;
+}
 .blog .card,
 .blog .card-body{color:var(--cor2);border:0;padding:0}
 .blog .card-body .card-title{
-    color:#000;
-    font-size:28px;
-    font-weight:500;
-    text-transform:uppercase;
-    border-left:10px solid var(--cor1);
-    padding:.5rem 1.5rem;
-    line-height:40px;
-    max-width:80%
+    border-left: 10px solid var(--cor1);
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    max-width: 80%;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
 }
 .blog .card-body .card-text{
     padding-left:calc(1.5rem + 10px);
@@ -120,7 +128,7 @@ body  > iframe:last-child{display:none}
     left: 35%;
 }
 .apx_iconGrid .iconGrid .item > div{width:350px;}
-.apx_iconGrid .iconGrid .item img{margin-bottom:10px;}
+.apx_iconGrid .iconGrid .item img{margin-bottom:10px;max-height:36px;}
 .apx_iconGrid .iconGrid .item strong{
     // font-size:18px;
     font-size:14px;
@@ -596,3 +604,47 @@ bottom:30px;
     text-transform: uppercase;
 }
 
+.link-overflow a{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 300px;
+}
+
+.fa{font-family:'FontAwesome'!important}
+
+@media(min-width:990px){
+    .apx_sliderItens .item{min-height:650px;}
+}
+
+.apx_form{}
+.apx_form label{
+    font-size:14px;
+    display:block;
+    color:#212121
+}
+.apx_form input,
+.apx_form textarea{
+    min-height:60px;
+    width:100%;
+    display:block;
+    margin-bottom:1rem;
+    border-radius:0px;
+    border:1px solid #495057;
+    padding:.5rem;
+}
+.apx_form button{
+    background: var(--cor1);
+    color: #fff;
+    letter-spacing: 0px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border:0;
+    border-radius:0px;
+    min-height:50px;
+    font-weight:bold;
+    text-transform:uppercase;
+
+}

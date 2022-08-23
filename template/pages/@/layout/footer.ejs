@@ -101,7 +101,7 @@ const contacts = _.cms('contacts') || {}
           </div>
         </div>
       <% } %>
-
+        <!--
       <% if (footer.links_2.list_categories || footer.links_2.list.find(({ url }) => url)) { %>
         <div class="col-12 col-sm-6 col-lg col-xl-auto px-xl-4">
           <a
@@ -143,7 +143,7 @@ const contacts = _.cms('contacts') || {}
           </div>
         </div>
       <% } %>
-
+-->
       <%
         const posts = _.cms('posts')
         if (Array.isArray(posts) && posts.length) {
@@ -161,7 +161,7 @@ const contacts = _.cms('contacts') || {}
         </a>
         <div class="collapse" id="footer-categories">
           
-          <ul class="footer__links">
+          <ul class="footer__links link-overflow">
                     
             <% posts.forEach(slug => { %>
               <% const { title, thumbnail, description } = _.cms(`posts/${slug}`) %>
@@ -214,3 +214,5 @@ const contacts = _.cms('contacts') || {}
 <!--
 <%- await include('@/layout/inc/ecom-credits') %>
 -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />

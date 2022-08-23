@@ -9,7 +9,7 @@
     },
     {
       "type": "apx_textSection",
-      "title": "<small>Sobre nós</small>Advocacia com<br><b>Atendimento<br>especializado</b>",
+      "title": "<div id='sobre-nos'></div><small>Sobre nós</small>Advocacia com<br><b>Atendimento<br>especializado</b>",
       "description": "Somos o verdadeiro parceiro do empresário. Atuamos de forma ativa, levando soluções personalizadas ao negócio, da pequena à grande empresa. O nosso lema é crescer junto! Para tanto, agimos com foco na prevenção, evitando despesas desnecessárias, tornando a sua empresa competitiva e aumentando o seu fluxo de caixa.<br><br>Deixamos o empresário à frente do que realmente interessa ao seu negócio: o crescimento coordenado e a diferença do seu produto no mercado, impactando positivamente seus clientes. Desse modo, as preocupações com o cumprimento das leis e análises e adequações contratuais passa a ser do nosso time de advogados, engajado e de espírito empreendedor e inovador. ",
       "titleColor": "#000000",
       "backgroundColor": "#ffffff",
