@@ -138,14 +138,8 @@
             "image": "/img/uploads/trabalhador.png",
             "link": "/"
           }
-        },
-        {
-          "option": {
-            "name": "Acessoria<br>Criminal",
-            "image": "/img/uploads/algemas.png",
-            "link": "/"
-          }
         }
+        
       ]
     },
     {
