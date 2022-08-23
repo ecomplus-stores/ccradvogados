@@ -114,35 +114,35 @@
         {
           "option": {
             "name": "Adequação<br>à LGPD",
-            "image": "/img/uploads/40x40.png",
+            "image": "/img/uploads/seguranca-de-dados.png",
             "link": "/"
           }
         },
         {
           "option": {
             "name": "Recuperação de<br>Crédito Tributário",
-            "image": "/img/uploads/40x40.png",
+            "image": "/img/uploads/taxa-de-juros-fixa.png",
             "link": "/"
           }
         },
         {
           "option": {
             "name": "Defesas Fiscais<br>Administrativas/Judiciais",
-            "image": "/img/uploads/40x40.png",
+            "image": "/img/uploads/pasta.png",
             "link": "/"
           }
         },
         {
           "option": {
             "name": "Defesas<br>Trabalhistas",
-            "image": "/img/uploads/40x40.png",
+            "image": "/img/uploads/trabalhador.png",
             "link": "/"
           }
         },
         {
           "option": {
             "name": "Acessoria<br>Criminal",
-            "image": "/img/uploads/40x40.png",
+            "image": "/img/uploads/algemas.png",
             "link": "/"
           }
         }
@@ -152,17 +152,17 @@
       "type": "apx_sliderItems",
       "title": "Nossa Equipe",
       "backgroundImage": "/img/uploads/shutterstock_1060957841.png",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+      "description": "Nossos profissionais estão sempre atualizados com as mais recentes legislações, tendo assim a certeza de que suas demandas serão resolvidas com o máximo de agilidade e qualidade",
       "titleColor": "#ffffff",
       "textColor": "#ffffff",
       "backgroundColor": "#000000",
       "options": [
         {
           "option": {
-            "image": "/img/uploads/3.png",
-            "description": "Especialista na área tributária, responsável pelas medidas de recuperação de tributos, planejamento tributário, defesas das empresas e empresários. Atuação em caráter consultivo e contencioso.",
+            "image": "/img/uploads/1.png",
+            "description": "Especialista na área do Direito Criminal e Processo Penal, responsável pela análise do risco na responsabilização penal do empresário, com foco nos crimes empresariais, Lei de Sonegação Fiscal e Lei de Crimes Ambientais. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "EDINO CHAIBEN"
+            "name": "Anderson Ramos"
           }
         },
         {
@@ -175,12 +175,29 @@
         },
         {
           "option": {
-            "image": "/img/uploads/1.png",
-            "description": "Especialista na área do Direito Criminal e Processo Penal, responsável pela análise do risco na responsabilização penal do empresário, com foco nos crimes empresariais, Lei de Sonegação Fiscal e Lei de Crimes Ambientais. Atuação em caráter consultivo e contencioso.",
+            "image": "/img/uploads/3.png",
+            "description": "Especialista na área tributária, responsável pelas medidas de recuperação de tributos, planejamento tributário, defesas das empresas e empresários. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "Anderson Ramos"
+            "name": "EDINO CHAIBEN"
+          }
+        },
+        {
+          "option": {
+            "image": "/img/uploads/4.png",
+            "description": "Advogado na área Cível, Família e Sucessões com foco no planejamento sucessório de sócios, holding familiar, reparação e defesa cível de empresas. Atuação em caráter consultivo e contencioso.",
+            "link": "/",
+            "name": "Pedro AUgusto"
+          }
+        },
+        {
+          "option": {
+            "image": "/img/uploads/5.png",
+            "description": "Advogada na área Empresarial e Trabalhista, responsável principal pelo planejamento societário e sucessório, constituição de Holdings, Compliance empresarial, marcas e patentes. Atuação em caráter consultivo, judicial, extrajudicial e contencioso.",
+            "link": "/",
+            "name": "Isabelle Paim"
           }
         }
+        
       ]
     },
     {
