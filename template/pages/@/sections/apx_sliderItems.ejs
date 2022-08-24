@@ -4,10 +4,10 @@
             <div class="row mb-4 justify-content-center">
                 <div class="col-12 col-lg-8">
                     <% if(opt.title) {%>
-                        <h3 class="text-center ccr_title mt-md-5 mt-3 mb-md-3 mb-1" style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%= opt.title %></h3>                        
+                        <h3 class="text-center ccr_title mt-md-5 mt-3 mb-md-3 mb-1" style="<%- opt.titleColor ? 'color:' + opt.titleColor + ';' : ''%>"><%- opt.title %></h3>                        
                     <% } %>
                     <% if(opt.description) {%>
-                        <p class="text-center" style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%= opt.description %></p>
+                        <p class="text-center" style="<%- opt.textColor ? 'color:' + opt.textColor + ';' : ''%>"><%- opt.description %></p>
                     <% } %>
                 </div>
             </div>

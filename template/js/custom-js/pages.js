@@ -27,8 +27,8 @@ $('.iconGrid').each(function(){
   
       // Calculate the position for each circle
       circles.each(function(index) {
-        var x = 550 * Math.cos(-0.5 * Math.PI + degree * (-1 * index - 0.5));
-        var y = 350 * Math.sin(-0.5 * Math.PI + degree * (-1 * index - 0.5));
+        var x = 480 * Math.cos(-0.5 * Math.PI + degree * (-1 * index - 0.5));
+        var y = 390 * Math.sin(-0.5 * Math.PI + degree * (-1 * index - 0.5));
   
         transforms.push('translate(' + x + 'px,' + y + 'px)');
       });
@@ -64,11 +64,23 @@ $('.ccr_mobile_menu_close').click(function(){
     $('#ccr_mobile_menu').removeClass('open');
 });
 
-// $(".anchor-menu a").click(function(e) {
-//     e.preventDefault();
-//     var aid = $(this).attr("href");
-//     $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
-// });
+$(".anchor-menu a").click(function(event) {
+    let href = $(this).attr('href');
+    if (this.hash !== "") {
+        try{
+        event.preventDefault();  
+        var hash = this.hash;
+
+        let yOffset = -100;
+        let element = document.getElementById(hash.replace('#',''));
+        let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
+        }catch(e){
+            window.location.href = href;
+        }
+      }
+});
 
 $('.apx_form:not(.avise-me)').submit(function(e){
     e.preventDefault();

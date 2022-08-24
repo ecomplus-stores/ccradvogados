@@ -34,7 +34,7 @@
     },
     {
       "type": "apx_iconGrid",
-      "title": "Áreas de Atuação",
+      "title": "<div id='areas-de-atuacao'></div>Áreas de Atuação",
       "image": "/img/uploads/ico.png",
       "backgroundImage": "/img/uploads/globebg.png",
       "titleColor": "#424041",
@@ -144,7 +144,7 @@
     },
     {
       "type": "apx_sliderItems",
-      "title": "Nossa Equipe",
+      "title": "<div id='equipe'></div>Nossa Equipe",
       "backgroundImage": "/img/uploads/shutterstock_1060957841.png",
       "description": "Nossos profissionais estão sempre atualizados com as mais recentes legislações, tendo assim a certeza de que suas demandas serão resolvidas com o máximo de agilidade e qualidade",
       "titleColor": "#ffffff",
@@ -200,7 +200,7 @@
         {
           "option": {
             "title": "Direito Tributário e Empresarial",
-            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "description": "Consultoria quanto ao pagamento dos tributos, bem como de sua fiscalização dentre outros serviços",
             "buttonTitle": "Leia Mais",
             "link": "/",
             "backgroundColor": "#b09f32",
@@ -211,7 +211,7 @@
         {
           "option": {
             "title": "Atendimento Especializado",
-            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "description": "Profissionais extremamente qualificados em áreas fiscais, trabalhistas, direito da saúde e muito mais",
             "buttonTitle": "Leia Mais",
             "link": "/",
             "backgroundColor": "#C8A641",
@@ -222,7 +222,7 @@
         {
           "option": {
             "title": "Serviços Digitais",
-            "description": "Atendimento especializado no direito tributário e empresarial, com ênfase no planejamento e redução fiscal",
+            "description": "Praticidade e agilidade na contratação de serviços para pessoa física ou jurídica",
             "buttonTitle": "Leia Mais",
             "link": "/",
             "backgroundColor": "#b09f32",
