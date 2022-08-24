@@ -86,7 +86,7 @@ $('.apx_form:not(.avise-me)').submit(function(e){
     e.preventDefault();
     var mail = [];
     mail.form = $(this);
-    mail.destination = $(this).find('[name="destination]').val() != undefined ? $(this).find('input[name="destination"]').val() : "edu.vlemes@gmail.com";
+    mail.destination = $(this).find('[name="destination]').val() != undefined ? $(this).find('input[name="destination"]').val() : "contato.ccrlaw@gmail.com";
     mail.replyTo = $(this).find('input[name="email"]').val();
     mail.subject = $(this).find('input[name="subject"]').val();
     mail.body = "";
