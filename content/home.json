@@ -153,7 +153,7 @@
       "options": [
         {
           "option": {
-            "image": "/img/uploads/1.png",
+            "image": "/img/uploads/20220824_122941_0000.png",
             "description": "Especialista na área do Direito Criminal e Processo Penal, responsável pela análise do risco na responsabilização penal do empresário, com foco nos crimes empresariais, Lei de Sonegação Fiscal e Lei de Crimes Ambientais. Atuação em caráter consultivo e contencioso.",
             "link": "/",
             "name": "Anderson Ramos"
@@ -161,7 +161,7 @@
         },
         {
           "option": {
-            "image": "/img/uploads/2.png",
+            "image": "/img/uploads/20220824_123210_0000.png",
             "description": "Especialista na área do Direito Médico e da Saúde, pós-graduado em Direito Tributário, responsável pelo planejamento jurídico/fiscal de Clínicas, Consultórios, Hospitais e outras empresas e sociedades na área da saúde. Atuação em caráter consultivo e contencioso.",
             "link": "/",
             "name": "Jaime Cunha"
@@ -169,7 +169,7 @@
         },
         {
           "option": {
-            "image": "/img/uploads/3.png",
+            "image": "/img/uploads/20220824_122842_0000.png",
             "description": "Especialista na área tributária, responsável pelas medidas de recuperação de tributos, planejamento tributário, defesas das empresas e empresários. Atuação em caráter consultivo e contencioso.",
             "link": "/",
             "name": "EDINO CHAIBEN"
@@ -177,15 +177,15 @@
         },
         {
           "option": {
-            "image": "/img/uploads/4.png",
+            "image": "/img/uploads/20220824_123115_0000.png",
             "description": "Advogado na área Cível, Família e Sucessões com foco no planejamento sucessório de sócios, holding familiar, reparação e defesa cível de empresas. Atuação em caráter consultivo e contencioso.",
             "link": "/",
-            "name": "Pedro AUgusto"
+            "name": "Pedro Augusto"
           }
         },
         {
           "option": {
-            "image": "/img/uploads/5.png",
+            "image": "/img/uploads/20220824_123026_0000.png",
             "description": "Advogada na área Empresarial e Trabalhista, responsável principal pelo planejamento societário e sucessório, constituição de Holdings, Compliance empresarial, marcas e patentes. Atuação em caráter consultivo, judicial, extrajudicial e contencioso.",
             "link": "/",
             "name": "Isabelle Paim"
@@ -199,10 +199,10 @@
       "options": [
         {
           "option": {
-            "title": "Direito Tributário e Empresarial",
-            "description": "Consultoria quanto ao pagamento dos tributos, bem como de sua fiscalização dentre outros serviços",
-            "buttonTitle": "Leia Mais",
-            "link": "/",
+            "title": "DIREITO TRIBUTÁRIO E EMPRESARIAL",
+            "description": "Atuação especializada na redução e recuperação fiscal, Planejamento Tributário e Reestruturação Empresarial.",
+            "buttonTitle": "Saiba mais",
+            "link": "/pages/contato",
             "backgroundColor": "#b09f32",
             "textColor": "#ffffff",
             "titleColor": "#ffffff"
@@ -210,10 +210,10 @@
         },
         {
           "option": {
-            "title": "Atendimento Especializado",
-            "description": "Profissionais extremamente qualificados em áreas fiscais, trabalhistas, direito da saúde e muito mais",
-            "buttonTitle": "Leia Mais",
-            "link": "/",
+            "title": "DIREITO MÉDICO E DA SAÚDE",
+            "description": "Prevenção jurídica e redução de riscos com foco para Clínicas, Hospitais, Consultórios e Laboratórios.",
+            "buttonTitle": "Saiba Mais",
+            "link": "/pages/contato",
             "backgroundColor": "#C8A641",
             "textColor": "#ffffff",
             "titleColor": "#ffffff"
@@ -221,10 +221,10 @@
         },
         {
           "option": {
-            "title": "Serviços Digitais",
-            "description": "Praticidade e agilidade na contratação de serviços para pessoa física ou jurídica",
-            "buttonTitle": "Leia Mais",
-            "link": "/",
+            "title": "DIREITO CRIMINAL E PENAL EMPRESARIAL",
+            "description": " Garantia na defesa de direitos com foco em acusações para crimes ambientais e sonegação fiscal.",
+            "buttonTitle": "Saiba Mais",
+            "link": "/pages/contato",
             "backgroundColor": "#b09f32",
             "textColor": "#ffffff",
             "titleColor": "#ffffff"

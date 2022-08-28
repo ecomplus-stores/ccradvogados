@@ -64,7 +64,7 @@ $('.ccr_mobile_menu_close').click(function(){
     $('#ccr_mobile_menu').removeClass('open');
 });
 
-$(".anchor-menu a").click(function(event) {
+$("a").click(function(event) {
     let href = $(this).attr('href');
     if (this.hash !== "") {
         try{
