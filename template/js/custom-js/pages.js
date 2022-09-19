@@ -109,3 +109,4 @@ $('.apx_form:not(.avise-me)').submit(function(e){
         }
     })    
 });
+
