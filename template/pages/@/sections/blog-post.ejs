@@ -22,6 +22,12 @@
     <div class="col-12 col-md-9">
       <div class="blog-post">
       <%- await include('@/sections/inc/md-content') %>
+      
+      <div class="mb-4">
+        <a class="whatsapp-post" style="" target="_blank" href="https://api.whatsapp.com/message/OQWNUB5FV53TL1?autoload=1&app_absent=0">
+          Quero falar com um advogado <i style="margin-left:5px;" class="fa fa-whatsapp"></i>
+        </a>
+      </div>
       </div>
     </div>
     <div class="col-md-3 col-12">
@@ -34,11 +40,11 @@
             if (Array.isArray(posts_) && posts_.length) {
               %>
                 
-              <% posts_.slice(0,10).forEach(slug_ => { %>
+              <% posts_.slice(0,4).forEach(slug_ => { %>
                 <% const post__ = _.cms(`posts/${slug_}`) %>
                   <li>
                     <a href="/posts/<%= slug_ %>">
-                    <%= post__.title %>
+                    - <%= post__.title %>
                     </a>                      
                   </li>
               <% }) %>

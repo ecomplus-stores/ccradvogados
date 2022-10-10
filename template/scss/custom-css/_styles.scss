@@ -687,3 +687,13 @@ bottom:30px;
     .apx_sliderItens .item p>span>b{font-size:10px}
     .blog .card-body .card-title{padding-bottom:0}
 }
+
+.whatsapp-post{
+    border-radius:30px;background:green;color:#fff;margin:0 15px;padding:1rem 2rem;display:inline-block;
+    transition:all .3s;
+    text-decoration:none;
+}
+.whatsapp-post:hover{
+    scale:1.1;
+    color:#fff;
+}
