@@ -1,7 +1,7 @@
 <%- await include('@/meta') %>
 
 <%
-const maintenance = _.cms('maintenance') || {}
+const maintenance = _.cms('maintenance') || { active: true }
 if (maintenance.active) {
   // redirect to maintenance page
   %>
