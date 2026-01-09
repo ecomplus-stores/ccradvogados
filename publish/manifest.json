@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.6e7e118d8d452c3b5485e4ded488b7eb.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.dbbd354dadb32c1d3b8d8d0cc5c64eb6.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.c094d002ba1753fe3c23a80748354cd0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.c1083197d3e4373535740ba0a2ced880.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.4052b4cb7cd5a595544f146f9c0982b5.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "CCR Advogados - Soluções Jurídicas Inteligentes",
+  "short_name": "CCR Advogados",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Chaiben, Cunha e Ramos",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
